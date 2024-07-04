@@ -1,6 +1,14 @@
+import { ThemeProvider } from "@mui/material/styles"
+
+import StartPage from "./pages/StartPage"
+
+import { theme } from "./helpers/theme"
+
 const App = () => {
   return (
-    <h1>hello</h1>
+    <ThemeProvider theme={theme}>
+      <StartPage />
+    </ThemeProvider>
   )
 }
 
