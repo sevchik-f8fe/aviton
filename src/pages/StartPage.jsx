@@ -8,7 +8,7 @@ import ContainerElement from "../components/ContainerElement";
 
 const StartPage = () => {
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '94vh' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '90vh' }}>
             <Stack>
                 <ContainerElement>
                     <Box sx={{ width: '100%', display: "flex", flexDirection: 'column', alignItems: 'center' }}>
