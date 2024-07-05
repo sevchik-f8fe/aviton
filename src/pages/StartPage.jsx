@@ -1,4 +1,5 @@
 import { Button, Typography, Stack, Box, List, ListItem, ListItemIcon, Paper } from "@mui/material";
+import { Link } from "react-router-dom";
 import { TonConnectButton } from "@tonconnect/ui-react";
 import LoyaltyIcon from '@mui/icons-material/Loyalty';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -8,9 +9,6 @@ import ContainerElement from "../components/ContainerElement";
 import avitonLogo from "../assets/avitonLogo.png"
 
 const StartPage = () => {
-
-    const tonConnectBtnClass = { width: '100%' }
-
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '90vh' }}>
             <Stack>
@@ -35,19 +33,19 @@ const StartPage = () => {
                             <ListItemIcon>
                                 <LoyaltyIcon sx={{ color: 'black' }} />
                             </ListItemIcon>
-                            <Typography variant="subtitle2" sx={{ fontWeight: 600, my: .5 }}>Покупайте и продавайте</Typography>
+                            <Typography variant="subtitle2" sx={{ fontWeight: 600, my: .5, color: '#1E2337' }}>Покупайте и продавайте</Typography>
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
                                 <ShoppingCartIcon sx={{ color: 'black' }} />
                             </ListItemIcon>
-                            <Typography variant="subtitle2" sx={{ fontWeight: 600, my: .5 }}>Удобная корзина</Typography>
+                            <Typography variant="subtitle2" sx={{ fontWeight: 600, my: .5, color: '#1E2337' }}>Удобная корзина</Typography>
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
                                 <EmojiEventsIcon sx={{ color: 'black' }} />
                             </ListItemIcon>
-                            <Typography variant="subtitle2" sx={{ fontWeight: 600, my: .5 }}>Розыгрыши</Typography>
+                            <Typography variant="subtitle2" sx={{ fontWeight: 600, my: .5, color: '#1E2337' }}>Розыгрыши</Typography>
                         </ListItem>
                     </List>
                 </ContainerElement>
@@ -60,11 +58,20 @@ const StartPage = () => {
                     }}
 
                 />
-                <Button variant="contained" color="secondary" sx={{ fontWeight: 600, fontSize: '.85em' }}>
-                    Создать новый аккаунт
-                </Button>
 
-                <Button sx={{ fontWeight: 600, fontSize: '.85em' }}>
+                <Link to="/login">
+                    <Button
+                        variant="contained"
+                        color="secondary"
+                        sx={{ fontWeight: 600, fontSize: '.95rem', borderRadius: '2rem', padding: '.5rem .9rem' }}
+                    >
+                        Создать аккаунт
+                    </Button>
+                </Link>
+
+                <Button
+                    sx={{ fontWeight: 600, fontSize: '.95rem', borderRadius: '2rem', padding: '.5rem .9rem' }}
+                >
                     Пропустить
                 </Button>
             </Box>

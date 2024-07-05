@@ -1,17 +1,17 @@
-import { ThemeProvider } from "@mui/material/styles"
-import { TonConnectUIProvider } from '@tonconnect/ui-react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import StartPage from "./pages/StartPage"
-
-import { theme } from "./helpers/theme"
+import RegistrationForm from "./pages/login/RegistrationForm";
 
 const App = () => {
+
   return (
-    <TonConnectUIProvider manifestUrl="https://https://sevchik-f8fe.github.io/aviton/tonconnect-manifest.json">
-      <ThemeProvider theme={theme}>
-        <StartPage />
-      </ThemeProvider>
-    </TonConnectUIProvider>
+    <BrowserRouter basename={'/aviton/'}>
+      <Routes>
+        <Route path="/" element={<StartPage />} />
+        <Route path="/login" element={<RegistrationForm />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

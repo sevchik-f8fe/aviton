@@ -1,14 +1,22 @@
 @font-face {
-    font-family: 'Open Sans ApiTon';
-    src: url('./fonts/OpenSans-VariableFont_wdth\,wght.ttf');
+    font-family: 'Inter Ton';
+    src: url('./fonts/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+* {
+    font-family: 'Inter Ton';
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: #F7F9FB;
     padding: .5em;
-    font-family: 'Open Sans ApiTon';
 }
 
 .ton-connect-btn {
-    font-family: 'Open Sans ApiTon';
+    font-family: 'Inter Ton';
+}
+
+.none {
+    display: none;
+    visibility: hidden;
 }
