@@ -1,4 +1,5 @@
 import { Button, Typography, Stack, Box, List, ListItem, ListItemIcon, Paper } from "@mui/material";
+import { TonConnectButton } from "@tonconnect/ui-react";
 import LoyaltyIcon from '@mui/icons-material/Loyalty';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
@@ -7,6 +8,8 @@ import ContainerElement from "../components/ContainerElement";
 import avitonLogo from "../assets/avitonLogo.png"
 
 const StartPage = () => {
+
+    const tonConnectBtnClass = { width: '100%' }
 
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '90vh' }}>
@@ -50,19 +53,21 @@ const StartPage = () => {
                 </ContainerElement>
             </Stack>
 
-            <Stack gap={1}>
-                <Button variant="contained" id='connectBtn' color="primary" sx={{ color: 'white' }}>
-                    Привязать кошелёк
-                </Button>
+            <Box sx={{ width: '100%', display: 'flex', justifyContent: 'end', alignItems: 'center', flexDirection: 'column', gap: 1 }}>
+                <TonConnectButton
+                    actionConfiguration={{
+                        twaReturnUrl: 'https://t.me/aviton123_bot'
+                    }}
 
-                <Button variant="contained" color="secondary">
+                />
+                <Button variant="contained" color="secondary" sx={{ fontWeight: 600, fontSize: '.85em' }}>
                     Создать новый аккаунт
                 </Button>
 
-                <Button>
+                <Button sx={{ fontWeight: 600, fontSize: '.85em' }}>
                     Пропустить
                 </Button>
-            </Stack>
+            </Box>
         </Box>
     );
 }
