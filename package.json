@@ -14,9 +14,11 @@
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.21",
     "@mui/material": "^5.15.21",
+    "@tonconnect/ui-react": "^2.0.5",
     "nanoid": "^5.0.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "wouter": "^3.3.1",
     "zustand": "^4.5.4"
   },
   "devDependencies": {
