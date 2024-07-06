@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Box, Button, TextField, InputAdornment, Paper, Link } from "@mui/material";
+import { Box, Button, TextField, InputAdornment, Paper } from "@mui/material";
 import dayjs from "dayjs";
 
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -7,9 +7,9 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { styled } from "@mui/material/styles";
 import { DateField } from '@mui/x-date-pickers/DateField';
 
+import ButtonElement from "../../components/ButtonElement";
 import ContainerElement from "../../components/ContainerElement";
 import avitonLogo from "../../assets/avitonLogo.png"
-import { Visibility } from "@mui/icons-material";
 
 const RegistrationForm = () => {
     const fileInput = useRef(null);
@@ -110,6 +110,7 @@ const RegistrationForm = () => {
 
                         <LocalizationProvider dateAdapter={AdapterDayjs}>
                             <CustomDateField
+                                format="DD.MM.YYYY"
                                 required
                                 label="Дата рождения"
                                 defaultValue={dayjs('2006-04-17')}
@@ -127,13 +128,11 @@ const RegistrationForm = () => {
                 </Box>
             </ContainerElement>
 
-            <Button
-                variant="contained"
-                color="secondary"
-                sx={{ fontWeight: 600, fontSize: '.95rem', borderRadius: '2rem', padding: '.5rem .9rem', alignSelf: 'center' }}
-            >
-                Продолжить
-            </Button>
+            <ButtonElement
+                title='Продолжить'
+                styles={{ fontWeight: 600, fontSize: '.95rem', borderRadius: '2rem', padding: '.5rem .9rem', alignSelf: 'center' }}
+                props={{ variant: "contained", color: "secondary" }}
+            />
         </Box>
 
     );

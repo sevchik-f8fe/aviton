@@ -15,12 +15,16 @@ export const theme = createTheme({
         }
     },
     components: {
-        MuiTextField: {
+        MuiButton: {
             styleOverrides: {
                 root: {
-                    '&.MuiInputBase-root': {
-                        borderRadius: '16px', // Значение по умолчанию для скругленных углов
-                    },
+                    transition: 'transform 0.3s ease',
+                    //     '&:hover': {
+                    //         transform: 'scale(1.05)'
+                    //     },
+                    //     '&:active': {
+                    //         transform: 'scale(1.02)'
+                    //     },
                 },
             },
         },

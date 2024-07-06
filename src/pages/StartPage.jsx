@@ -5,6 +5,7 @@ import LoyaltyIcon from '@mui/icons-material/Loyalty';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 
+import ButtonElement from "../components/ButtonElement";
 import ContainerElement from "../components/ContainerElement";
 import avitonLogo from "../assets/avitonLogo.png"
 
@@ -60,20 +61,14 @@ const StartPage = () => {
                 />
 
                 <Link to="/login">
-                    <Button
-                        variant="contained"
-                        color="secondary"
-                        sx={{ fontWeight: 600, fontSize: '.95rem', borderRadius: '2rem', padding: '.5rem .9rem' }}
-                    >
-                        Создать аккаунт
-                    </Button>
+                    <ButtonElement
+                        title='Создать аккаунт'
+                        styles={{ fontWeight: 600, fontSize: '.95rem', borderRadius: '2rem', padding: '.5rem .9rem' }}
+                        props={{ variant: "contained", color: "secondary" }}
+                    />
                 </Link>
 
-                <Button
-                    sx={{ fontWeight: 600, fontSize: '.95rem', borderRadius: '2rem', padding: '.5rem .9rem' }}
-                >
-                    Пропустить
-                </Button>
+                <ButtonElement title='Пропустить' styles={{ fontWeight: 600, fontSize: '.95rem', borderRadius: '2rem', padding: '.5rem .9rem' }} props={null} />
             </Box>
         </Box>
     );
